@@ -1,3 +1,5 @@
+var topBar = document.querySelector(".top-bar");
+
 function updateTime() {
         var currentTime = new Date().toLocaleString();
         var timeText = document.querySelector("#timeElement");
@@ -99,6 +101,14 @@ contactScreenClose.addEventListener("click", function() {
 });
 dragElement(contactScreen);
 
+var projectScreen = document.querySelector("#project");
+var projectScreenClose = document.querySelector("#projectclose");
+
+projectScreenClose.addEventListener("click", function() {
+  closeWindow(projectScreen);
+});
+dragElement(projectScreen);
+
 function handleIconTap(element, windowId) {
   var targetWindow = document.querySelector("#" + windowId);
 
@@ -115,10 +125,29 @@ var biggestIndex = 1;
 
 function openWindow(element) {
   element.style.display = "block";
-  
   biggestIndex++;
   element.style.zIndex = biggestIndex;
-  
   topBar.style.zIndex = biggestIndex + 1;
-
 }
+
+const calcDisplay = document.getElementById("calcDisplay");
+
+function appendToDisplay(input) {
+    calcDisplay.value += input;
+}
+
+function clearDisplay() {
+    calcDisplay.value = "";
+}
+
+function calculate() {
+    try {
+        calcDisplay.value = eval(calcDisplay.value);
+    } catch (error) {
+        calcDisplay.value = "Error";
+    }
+}
+
+var calcScreen = document.querySelector("#calculator");
+document.querySelector("#calculatorclose").addEventListener("click", () => closeWindow(calcScreen));
+dragElement(calcScreen);

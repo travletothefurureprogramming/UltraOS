@@ -17,6 +17,13 @@
 
         </span>
 
+        <p style="background-color: rgba(256, 256, 256, 0.25); padding: 4px; border-radius: 16px; cursor: pointer;" onclick="handleIconTap(this, 'calculator')">
+
+            Ultra Calculator
+
+        </p>
+
+        
         <p style="background-color: rgba(256, 256, 256, 0.25); padding: 4px; border-radius: 16px; cursor: pointer;" onclick="handleIconTap(this, 'contact')">
 
             Contact Me
@@ -32,6 +39,12 @@
         <p style="background-color: rgba(256, 256, 256, 0.25); padding: 4px; border-radius: 16px; cursor: pointer;" onclick="handleIconTap(this, 'notes')">
 
             Ultra Notes
+
+        </p>
+
+        <p style="background-color: rgba(256, 256, 256, 0.25); padding: 4px; border-radius: 16px; cursor: pointer;" onclick="handleIconTap(this, 'project')">
+
+            My Projects
 
         </p>
 
@@ -76,14 +89,59 @@
     </div>
 
     <div id="contact" class="welcome" style="display: none;">
-    <div id="contactheader" style="cursor: move;">
-            <p><p id="contactclose" class="closebutton">&times;</p></p>
+    <div id="contactheader" style="width: 100%; display: flex; cursor: move; justify-content: center;"">
+            <p><p id="contactclose" class="closebutton">&times;</p>Contact Me</p>
     </div>
     <div style="text-align: center; padding: 20px;">
         <h3>Gregory</h3>
         <p>Teenager Programmer</p>
+        <p>Enthusiast of Edge AI & Home Automation. Building custom solutions to make everyday life smarter. Currently obsessed with Python, ADB integration, and robotics. Open source contributor.</p>
         <button onclick="window.location.href='mailto:travletothefurureprogramming@gmail.com'">Send Email</button>
         <button onclick="window.open('https://stardance.hackclub.com/home')">Visit Stardance</button>
+    </div>
+    </div>
+
+    <div id="project" class="welcome" style="display: none;"style="width: 565px; height: 400px;">
+    <div id="projectheader" style="width: 100%; display: flex; cursor: move; justify-content: center;">
+            <p><p id="projectclose" class="closebutton">&times;</p>My Projects</p>
+    </div>
+    <div style="text-align: center; padding: 20px; height: 500px; overflow-y: scroll;">
+        <h3>Edge-AI Home Monitoring System</h3>
+        <p>A privacy-first, edge-AI home automation hub using Linux, Flask, and real-time computer vision to orchestrate smart devices.</p>
+        
+        <h3>Py-Watchdog: Smart Folder Automation Hub</h3>
+        <p>A smart open-source tool with Python which is running in backgroud and organize automatic the Downloads folder</p>
+
+        <h3>MacroByte</h3>
+        <p>A custom 3-key macropad, specifically engineered to streamline a programmer's workflow.</p>
+
+        <h3>TO-DO CLI</h3>
+        <p>A minimalist, file-based command-line todo manager designed for developers who want to manage tasks without leaving the terminal.</p>
+
+        <h3>Custom Text-Based Shell</h3>
+        <p>A Custom Text-Based Shell for windows which provide extra commands!</p>
+
+        <h3>CLI System Health Monitor Dashboard</h3>
+        <p>A real-time terminal dashboard built with Python that monitors your system's vital statistics live.</p>
+
+        <h3>Cellular Automata & Artificial Life Simulation</h3>
+        <p>The Artificial Life Simulator is a virtual 2D ecosystem running on a continuous execution loop.</p>
+
+    </div>
+    </div>
+
+    <div id="calculator" class="welcome" style="display: none; width: 250px;">
+    <div id="calculatorheader" style="width: 100%; display: flex; cursor: move; justify-content: center;">
+        <p><span id="calculatorclose" class="closebutton">&times;</span> Ultra Calculator</p>
+    </div>
+    <div style="padding: 10px;">
+        <input type="text" id="calcDisplay" disabled style="width: 100%; margin-bottom: 10px; text-align: right;">
+        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 5px;">
+            <button style="border-radius: 50%" onclick="appendToDisplay('7')">7</button><button style="border-radius: 50%" onclick="appendToDisplay('8')">8</button><button style="border-radius: 50%" onclick="appendToDisplay('9')">9</button><button style="border-radius: 50%" onclick="calculate()">=</button>
+            <button style="border-radius: 50%" onclick="appendToDisplay('4')">4</button><button style="border-radius: 50%" onclick="appendToDisplay('5')">5</button><button style="border-radius: 50%" onclick="appendToDisplay('6')">6</button><button style="border-radius: 50%" onclick="clearDisplay()">C</button>
+            <button style="border-radius: 50%" onclick="appendToDisplay('1')">1</button><button style="border-radius: 50%" onclick="appendToDisplay('2')">2</button><button style="border-radius: 50%" onclick="appendToDisplay('3')">3</button><button style="border-radius: 50%" onclick="appendToDisplay('+')">+</button>
+            <button style="border-radius: 50%" onclick="appendToDisplay('0')">0</button><button style="border-radius: 50%" onclick="appendToDisplay('.')">.</button>
+        </div>
     </div>
     </div>
 
@@ -95,6 +153,14 @@
         <div id="contactIcon" onclick="handleIconTap(this, 'contact')" style="cursor: pointer; text-align: center; padding: 16px; filter: drop-shadow(0 0 8px black); width: fit-content">
             <img src="./contact.jpg" style="width: 64px; height: 64px; border-radius: 16px;">
             <p style="margin: 0px; color: coral; ">Contact Me</p>
+        </div>
+        <div id="projectIcon" onclick="handleIconTap(this, 'project')" style="cursor: pointer; text-align: center; padding: 16px; filter: drop-shadow(0 0 8px black); width: fit-content">
+            <img src="./project.jpg" style="width: 64px; height: 64px; border-radius: 16px;">
+            <p style="margin: 0px; color: coral; ">My Projects</p>
+        </div>
+        <div id="calculatorIcon" onclick="handleIconTap(this, 'calculator')" style="cursor: pointer; text-align: center; padding: 16px; filter: drop-shadow(0 0 8px black); width: fit-content">
+            <img src="./calculator.jpg" style="width: 64px; height: 64px; border-radius: 16px;">
+            <p style="margin: 0px; color: coral; "> Ultra Calculator</p>
         </div>
     </div>
 

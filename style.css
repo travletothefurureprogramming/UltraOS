@@ -103,6 +103,21 @@
             cursor: pointer;
         }
 
+        #contact {
+         width: 600px;  
+         height: 500px; 
+        }
+
+        #contactheader {
+            font-size: 45px;   
+            width: 50px;       
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+
         #contactclose {
             font-size: 45px;   
             width: 50px;       
@@ -111,5 +126,36 @@
             align-items: center;
             justify-content: center;
             cursor: pointer;
+        }
+
+        
+        #project {
+            width: 800px;  
+            height: 600px; 
+        }
+
+        #projectheader {
+            font-size: 45px;   
+            width: 50px;       
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+
+        #projectclose {
+            font-size: 45px;   
+            width: 50px;       
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+
+        #calculator {
+            width: 250px;
+            height: auto;
         }
 
