@@ -99,3 +99,15 @@ function handleIconTap(element) {
     selectIcon(element);
   }
 }
+
+var biggestIndex = 1;
+
+function openWindow(element) {
+  element.style.display = "block";
+  
+  biggestIndex++;
+  element.style.zIndex = biggestIndex;
+  
+  topBar.style.zIndex = biggestIndex + 1;
+  
+}
