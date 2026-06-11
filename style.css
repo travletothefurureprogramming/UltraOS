@@ -14,6 +14,11 @@
             color: coral;
         }
 
+        address{
+            margin: 4px;
+            color: coral;
+        }
+
         
         .welcome{
             border: solid;
@@ -89,6 +94,16 @@
         }
 
         #notesheader {
+            font-size: 45px;   
+            width: 50px;       
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+
+        #contactclose {
             font-size: 45px;   
             width: 50px;       
             height: 50px;

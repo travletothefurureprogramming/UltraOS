@@ -91,11 +91,22 @@ notesScreenClose.addEventListener("click", function() {
 
 dragElement(notesScreen);
 
-function handleIconTap(element) {
+var contactScreen = document.querySelector("#contact");
+var contactScreenClose = document.querySelector("#contactclose");
+
+contactScreenClose.addEventListener("click", function() {
+  closeWindow(contactScreen);
+});
+dragElement(contactScreen);
+
+function handleIconTap(element, windowId) {
+  var targetWindow = document.querySelector("#" + windowId);
+
   if (element.classList.contains("selected")) {
     deselectIcon(element);
-    openWindow(notesScreen);
+    openWindow(targetWindow);
   } else {
+    if (selectedIcon) deselectIcon(selectedIcon);
     selectIcon(element);
   }
 }
@@ -109,5 +120,5 @@ function openWindow(element) {
   element.style.zIndex = biggestIndex;
   
   topBar.style.zIndex = biggestIndex + 1;
-  
+
 }
