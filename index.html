@@ -4,33 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ultra Os</title>
-    <style>
-        body{
-            background-color: #98abd7;
-            font-family: 'Times New Roman', Times, serif;
-        }
+    <link rel="stylesheet" type="text/css" href="./style.css" />
 
-        h1{
-            margin: 4px;
-            color: chocolate;
-        }
-
-        img{
-            width: 10cm;
-            height: 10cm;
-            border-radius: 16px;
-            object-fit: cover;
-        }
-    </style>
 </head>
 <body>
-    <h1>Hello and Welcome to Ultra OS</h1>
-    <h2>Introduction</h2>
-    <p>Hello, I am Gregory and I am a teenager programmer who participate on <a href="https://stardance.hackclub.com/home">Stardance</a>
-    <p>My hobies:</p>
-    <p>1. Robotics</p>
-    <p>2. Programming</p>
 
-<img src="image.png" alt="image">
+    <div class="top-bar">
+
+        <span style="margin-left: 16px;">
+            
+            🔋 100%
+
+        </span>
+
+        <p style="background-color: rgba(256, 256, 256, 0.25); padding: 4px 12px; border-radius: 16px; cursor: pointer;" id="welcomeopen">
+
+            UltraOs
+
+        </p>
+
+        
+
+            
+
+
+        <p style="margin-right: 16px;"  id="timeElement">
+
+            11/06/2026 3:50 PM
+
+        </p>
+
+    </div>
+
+
+    <div  id="welcome"  class="welcome">
+        <div id="welcomeheader"
+            style="width: 100%; display: flex; align-items: center; cursor: move; justify-content: center; margin-top: 8px;">
+            <p style="margin: 0px; color: #fff; font-weight: 500">Welcome</p>
+        </div>
+        
+
+        <h1>UltraOs</h1>
+
+        <p>Hello, I am Gregory and I am a teenager programmer who participate on <a href="https://stardance.hackclub.com/home">Stardance</a>
+
+        <p id="welcomeclose", class="closebutton">Close</p>
+
+    </div>
+
+
+    <script src="./script.js"></script>
+
 </body>
 </html>
