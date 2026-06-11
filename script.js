@@ -69,3 +69,33 @@ welcomeScreenClose.addEventListener("click", function() {
 welcomeScreenOpen.addEventListener("click", function() {
   openWindow(welcomeScreen);
 });
+
+var selectedIcon = undefined
+
+function selectIcon(element) {
+  element.classList.add("selected");
+  selectedIcon = element
+} 
+
+function deselectIcon(element) {
+  element.classList.remove("selected");
+  selectedIcon = undefined
+}
+
+var notesScreen = document.querySelector("#notes");
+var notesScreenClose = document.querySelector("#notesclose");
+
+notesScreenClose.addEventListener("click", function() {
+  closeWindow(notesScreen);
+});
+
+dragElement(notesScreen);
+
+function handleIconTap(element) {
+  if (element.classList.contains("selected")) {
+    deselectIcon(element);
+    openWindow(notesScreen);
+  } else {
+    selectIcon(element);
+  }
+}
