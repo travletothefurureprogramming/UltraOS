@@ -1,7 +1,7 @@
         body{
             background-color: #98abd7;
             font-family: 'Times New Roman', Times, serif;
-            background-image: url(./background.jpg);
+            background-image: url(/assets/background.jpg);
         }
 
         h1{
